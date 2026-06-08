@@ -26,3 +26,28 @@ qui, en premier lieu, produit (entre autres) la sortie suivante :
 
 Il suffit donc, avec le navigateur, d'ouvrir l'URL ``http://127.0.0.1:8000`` et à chaque enregistrement
 d'un fichier `rst`, la page est mise à jour dans le navigateur. **Très pratique !!**
+
+Enfin, il est possible de construire `à la main` la documentation en allant, toujours dans un terminal,
+dans le dossier `doc`, et taper la commande :
+
+:code:`make html`
+
+par exemple pour générer le code HTML.
+
+Pour produire un PDF :
+
+:code:`make latexpdf`
+
+Le PDF se trouve à ``doc/_build/latex/gestbat.pdf``
+
+.. note::
+    une erreur en lançant `make latexpdf`
+
+    :code:`! LaTeX Error: File `tgtermes.sty' not found.``
+
+    L'erreur corrigée avec :
+
+    :code:`apt install tex-gyre fonts-texgyre texlive-fonts-extra`
+
+
+

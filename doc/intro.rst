@@ -14,7 +14,7 @@ chargée lors de la prochaine utilisation du VAE.
 Ce boîtier a pour fonction de ne pas avoir à se soucier de cette `contrainte`, il permet de
 mettre en place la recharge de la batterie qui commencera de façon différée.
 
-D'autre part, tout chargeur branché, même quand il ne rempli pas sa fonction de `chargeur`,
+D'autre part, tout chargeur branché, même quand il ne remplit pas sa fonction de `chargeur`,
 c'est-à-dire quand la charge est terminée, **continue à tirer du courant de façon totalement
 inutile !**
 

@@ -7,8 +7,9 @@ Documentation technique
 
 .. note::
     Des différences peuvent apparaître entre le schémas et la réalité. Idem pour
-    les N° des pins du RPI-Pico
-    
+    les N° des pins du RPI-Pico. De plus, toutes les fonctionnalités n'ont pas
+    été implémentées.
+
 
 Le montage général
 ------------------

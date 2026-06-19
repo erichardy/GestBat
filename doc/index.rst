@@ -3,6 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+
+.. include:: links.rst
+
+
 Documentation du boîtier GestBat
 ================================
 
@@ -12,6 +16,7 @@ Documentation du boîtier GestBat
 
    Introduction <intro>
    Utilisation <utilisation>
+   Documentation technique <technique>
    Annexes <annexes>
 
 

@@ -40,8 +40,7 @@ En résumé, les avantages procurés par ce boîter :
 
 * si besoin, je peux régler un délai de début de charge à une valeur différence de la valeur par défaut.
 
+**Au jour où ces lignes sont écrites (juin 2026), j'utilise ce boîtier depuis plusieurs mois de façon régulière.**
 
-
-
-
+**Je suis TRÈS satisfait de mon appareil**
 

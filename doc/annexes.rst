@@ -1,8 +1,25 @@
 .. include:: links.rst
 
+=======
 Annexes
 =======
 
+--------------------------
+Améliorations potentielles
+--------------------------
+
+#. un affichage plus descriptif lors du déroulement de la recharge. L'affichage actuel ne fourni aucune
+   information
+   réellement lisible ou utile. Il pourrait y avoir une indication du temps écoulé, de la puissance
+   consommée, etc...
+#. un compte rendu de la charge : temps complet de la charge, courant tiré en temps réel, tension aux
+   bornes du chargeur, d'où puissance consommée, etc...
+#. mesure de la tension aux bornes du chargeur
+#. mise en mémoire des données de la dernière recharge (et pourquoi pas des précédentes)
+#. nouvelle tare pour l'utilisation possible d'un autre chargeur
+
+
+-------------------------------
 A propos de cette documentation
 -------------------------------
 

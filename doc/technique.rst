@@ -105,13 +105,36 @@ Quelques autres détails
 L'alimentation
 --------------
 
+Elle est constituée d'un transformateur 230VAC/12VAC suivi d'un montage qui
+
+#. après 2 simples redressements et filtrage fournit -9VDC et +9VDC pour les AOP, en
+    utilisant des régulateurs 7909 et 7809
+
+#. pris sur la sortie +9VDC, le 5VDC destiné au `RPI-Pico`_
+
 
 Le bouton resset
 ----------------
+
+A tout moment, il est possible de mettre hors tension tout le boîtier avec le bouton *Reset*.
+
+Dans le fichier :code:`gestbatMain`, on trouve la configuration de cette fonctionnalité avec la
+mise en place d'une IRQ :code:`resetButton.irq(resetAction)`
+
+La fonction :code:`resetAction` se contente de désactiver les relais principaux.
 
 
 Utilisation pour un autre chargeur que celui du VAE
 ---------------------------------------------------
 
+Une utilisation pour un autre chargeur est possible, il faut seulement s'assurer que le
+chargeur satisfasse aux conditions suivantes :
+
+#. que tout au long de la charge de l'appareil qu'il doit recharger, il tire suffisament
+   de courant,
+#. que la baisse du courant consommé n'arrive pas à produire trop tôt une valeur proche de
+   600 dans le système de mesure du courant avant que la charge soit terminée
+#. et à l'inverse, qu'à la fin de la charge, il tire assez peu de courant pour atteindre une
+   valeur inférieure à 600 permettant ainsi de provoquer l'arrêt complet du dispositif.
 
 

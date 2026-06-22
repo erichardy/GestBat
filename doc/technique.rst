@@ -10,24 +10,72 @@ Documentation technique
     les N° des pins du RPI-Pico. De plus, toutes les fonctionnalités n'ont pas
     été implémentées.
 
-
+------------------
 Le montage général
 ------------------
 
 .. image:: SchemasComplet.png
 
+---------------------------------
+Le Coeur du dispositif : RPI-Pico
+---------------------------------
+
+Bien que l'ensemble du dispositif contienne des éléments d'électricité et d'électonique, il est
+piloté par un micro-contrôleur : le `Raspberry Pi Pico`_
+
+Le choix de ce microcontrolleur s'est fait essentiellement sur la base de ces éléments :
+
+* je n'avais pas besoin de connections WIFI ou BlueTooth
+* il a tout ce dont j'ai besoin
+* il est aisé de programmer en `MicroPython`_
 
 
-Les fonctionalités en modules
------------------------------
+------------------
+Les fonctionalités
+------------------
+
+.. note::
+    Tout au long de la description de l'utilisation de ce boîtier, il ne sera pas fait
+    état des divers clignotements des LEDs et des Bips du buzzer. Ces deux types d'indicateurs
+    n'ont pas de fonction particulière si ce n'est que `d'amuser la galerie !`... mais
+    aussi, éventuellement, pour montrer l'utilisation des :code:`Timers`
 
 
-* La mise sous tension
+La mise sous tension
+--------------------
 
-* Le délai avant le début de la charge
+Un problème que que nous rencontrons en France est l'absence de norme forte et contraignante techniquement
+concernant la configuration des prises de courant. On peut indifférement avoir la phase sur l'une des
+broches d'une prise (évidemment à l'exception de la terre), et le neutre sur l'autre.
 
-* Le début de la charge
+Or, pour un système branché au secteur, si l'interrupteur est positionné côté neutre, le dispositif est
+en permanence sous tension côté phase. Certains interrupteurs opère l'ouverture du circuit à la fois
+à la phase et le neutre, mais ce n'est pas le cas systématiquement.
 
+C'est pour cette raison que, dans le boitier *GestBat*, il y a deux relais au niveau de la connection au
+secteur, un relai pour la phase et l'autre pour le neutre, sachant qu'il n'y en a aucun de pré-déterminé.
+
+La mise sous tension est donc réalisée d'abord par l'appui sur les 2 boutons qui contournent les
+deux relais SSR et permettent le passage de la phase et du neutre. Le RPI-Pico peut alors être alimenté
+et mettre à l'état haut les signaux qui gèrent les relais SSR.
+
+Fichier :code:`gestbatMain.py`, :code:`fonction startUP()`
+
+
+Le délai avant le début de la charge
+------------------------------------
+
+Compte tenu que l'utilisation principale est avec la batterie de mon VAE et comme indiqué ci-dessus,
+le délai configuré par défaut est de 30mn.
+
+Celui-ci est réglable avec le bouton rotatif à droite, en plus ou en moins (toujours en minutes),
+et la validation se fait par un appui (vertical) qui effectue un 'clic'.
+
+Le compte à rebours commence alors.
+
+
+Le début de la charge
+---------------------
 
 
 
@@ -38,5 +86,5 @@ La partie électonique
 
 
 
-ezrfzer
+
 

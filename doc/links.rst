@@ -24,6 +24,10 @@
 
 .. _hystérésis: https://fr.wikipedia.org/wiki/Hyst%C3%A9r%C3%A9sis
 
+.. _Raspberry Pi Pico: https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html
+.. _RPI-Pico: https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html
+.. _MicroPython: https://micropython.org/
+
 .. un exemple de doc : cd ~/SSD/Dev-OLD/ubl.tebl/docs
 
 

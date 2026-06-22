@@ -20,8 +20,8 @@ D'autre part, tout chargeur branché, même quand il ne remplit pas sa fonction 
 c'est-à-dire quand la charge est terminée, **continue à tirer du courant de façon totalement
 inutile !**
 
-En l'occurence, le chargeur de mon VAE consomme XXmA une fois la charge terminée, et, de plus, il
-consomme XXXmA s'il est resté branché au secteur et même si la batterie est débranchée.
+En l'occurence, le chargeur de mon VAE consomme 22mA (soit **plus de 5 Watts !**) une fois la charge terminée, que
+la batterie soit restée branchée ou non. Voir en annexe une remarque plus générale à ce sujet...
 
 .. note::
     Ce constat s'applique aussi à tous les chargeurs de tablettes et autres téléphones mobiles qui,

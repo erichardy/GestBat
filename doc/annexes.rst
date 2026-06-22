@@ -19,11 +19,51 @@ Améliorations potentielles
 #. nouvelle tare pour l'utilisation possible d'un autre chargeur
 
 
+---------------------------
+Les chargeurs USB et autres
+---------------------------
+
+Il n'est pas rare de voir, dans les maisons, un ou plusieurs chargeurs de téléphonne qui sont laissés
+dans la prise de courant alors que la charge du téléphone, ou autre appareil, est terminée.
+Il faut bien comprendre que le fait d'avoir retiré l'appareil à recharger n'empêche pas
+que le chargeur qui est resté branché consomme toujours du courant... et pour s'en convaincre,
+on peut facilement constater qu'il chauffe toujours un peu.
+
+On a vu, dans ce document, que le chargeur de la batterie de mon VAE consomme 22mA s'il est resté
+branché alors que la charge de la batterie est terminée, de même que si la batterie est déconnectée
+du chargeur.
+
+Les quelques autres mesures de courant que j'ai pu faire avec des chargeurs, même de petite taille, ont
+montré une consommation au minimum de 1.5mA, mais cela pouvait aller jusqu'à plus de 15mA
+
+Faisons un calcul rapide avec la mesure la plus faible : **1.5mA**
+
+On peut facilement supposer que, par famille (ou ménage, au sens INSEE), il y aurait en moyenne 1
+chargeur en permanence laissé sur le secteur sans appareil à recharger sur lui. L'INSEE nous dit qu'il
+y a près de 31 millions de ménages en France. donc :
+
+#. 0.0015 A * 240 V = 0.36 Watts
+#. 0.36Watts * 31000000 = 11160000 Watts, ou 11 Mega Watts !
+
+En résumé, on peut facilement admettre qu'en France, **à chaque instant, 11 Mega Watts sont gaspillés !!**
+soit environ 10% de la production instantanée d'un réacteur nucléaire.
+
+Ces 11 Megawatts instantanés correspondent à un gaspillage annuel de plus de 97 GWh,
+l'équivalent de la consommation annuelle d'une ville d'environ 20.000 habitants !
+
+
+.. note::
+    Le calcul que je fais ici est discutable, dans un sens ou dans l'autre car il n'est pas
+    facile d'établir le nombre de chargeurs qui sont restés brachés inutilement au secteur
+    dans les maisons des particuliers... mais il faudrait aussi évaluer les chargeurs restés
+    branchés sur les lieux de travail, les appareils restés en veille (TV, enceintes BlueTooth, etc...).
+    L'objet de ce calcul est juste pour donner une idée.
+
 -------------------------------
 A propos de cette documentation
 -------------------------------
 
-Cette documentation est réalisée en format `rst` avec `sphinx`_.
+Cette documentation est réalisée en format `RST`_ avec `sphinx`_.
 
 Dans le dossier de la réalisation de ce module `GestBat`, un dossier `doc` est créé. La procédure de
 création de la documentation est initialisée avec la commande `sphinx-quickstart`.

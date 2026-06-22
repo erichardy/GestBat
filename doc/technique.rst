@@ -73,18 +73,45 @@ et la validation se fait par un appui (vertical) qui effectue un 'clic'.
 
 Le compte à rebours commence alors.
 
+Au niveau programmation, la gestion de ce délai se fait dans le fichier :code:`gestBatRoptary.py`
+où l'on voit qu'une :code:`IRQ` est utilisée pour le bouton rotatif.
+
 
 Le début de la charge
 ---------------------
 
+La charge commence donc une fois le délai expiré et à l'activation du relai SSR : :code:`chargerRelay.value(1)`
+
+La durée de la charge ne se fait pas en fonction du temps, mais en fonction de la mesure du courant
+consommé par le chargeur. Cette mesure se fait par un `transformateur de courant` récupéré, le signal est
+amplifié et redressé par un circuit avec 2 AOP `LM741`.
+
+Le signal est envoyé sur le GPIO26 du `RPI-Pico`_ qui est un ADC.
+
+Une moyenne des 10 dernières valeurs est faite (fonction :code:`averageValues()`) et quand le résultat
+devient inférieur ou égal à **600**, la charge se termine.
+
+La valeur de **600** n'est pas arbitraire, elle est la valeur mesurée par l'**ADC** qui correspond
+à ce qui a été mesuré avec un ampèremètre au
+moment où le chargeur détecte que la batterie est chargée et qu'il stoppe la charge.
+
+A ce moment-là, la fonction :code:`shutdown()` est appelée, les relais principaux sont alors mis
+à **off**, et TOUT est coupé !
+
+-----------------------
+Quelques autres détails
+-----------------------
+
+L'alimentation
+--------------
 
 
+Le bouton resset
+----------------
 
 
-La partie électonique
----------------------
-
-
+Utilisation pour un autre chargeur que celui du VAE
+---------------------------------------------------
 
 
 
